@@ -1,0 +1,931 @@
+{
+ "_sobre": "Fonte única dos números do painel. Edite aqui e rode: python python/build_dados.py",
+ "_campos_UFS": [
+  "nome",
+  "regiao",
+  "lider_1turno (f=Flávio Bolsonaro, l=Lula)",
+  "pct_validos_lider",
+  "governador",
+  "partido_governador",
+  "turno_eleicao_governador",
+  "resultados_conhecidos [nome, partido, %] ou null",
+  "senadores [nome, partido]"
+ ],
+ "ELEIT": 158745502,
+ "KEYC": {
+  "f": "--ca",
+  "l": "--cb"
+ },
+ "P1": [
+  {
+   "n": "Flávio Bolsonaro",
+   "p": "PL",
+   "num": 22,
+   "v": 56104503,
+   "k": "--ca"
+  },
+  {
+   "n": "Lula",
+   "p": "PT",
+   "num": 13,
+   "v": 53879538,
+   "k": "--cb"
+  },
+  {
+   "n": "Augusto Cury",
+   "p": "AVANTE",
+   "num": 70,
+   "v": 3448569,
+   "k": "--c3"
+  },
+  {
+   "n": "Renan Santos",
+   "p": "MISSÃO",
+   "num": 14,
+   "v": 2675887,
+   "k": "--c4"
+  },
+  {
+   "n": "Ronaldo Caiado",
+   "p": "PSD",
+   "num": 55,
+   "v": 2605148,
+   "k": "--c5"
+  },
+  {
+   "n": "Romeu Zema",
+   "p": "NOVO",
+   "num": 30,
+   "v": 326488,
+   "k": "--c6"
+  },
+  {
+   "n": "Samara",
+   "p": "UP",
+   "num": 80,
+   "v": 122911,
+   "k": "--cn"
+  },
+  {
+   "n": "Hertz Dias",
+   "p": "PSTU",
+   "num": 16,
+   "v": 43103,
+   "k": "--cn"
+  },
+  {
+   "n": "Clariana Barão",
+   "p": "DC",
+   "num": 27,
+   "v": 40043,
+   "k": "--cn"
+  },
+  {
+   "n": "Edmilson Costa",
+   "p": "PCB",
+   "num": 21,
+   "v": 22693,
+   "k": "--cn"
+  },
+  {
+   "n": "Wilson Grassi",
+   "p": "DEMOCRATA",
+   "num": 35,
+   "v": 16881,
+   "k": "--cn"
+  },
+  {
+   "n": "Rui Costa Pimenta",
+   "p": "PCO",
+   "num": 29,
+   "v": 15024,
+   "k": "--cn"
+  }
+ ],
+ "T1": {
+  "validos": 119300788,
+  "brancos": 2300798,
+  "nulos": 3674249,
+  "comp": 125275835
+ },
+ "P2": [
+  {
+   "n": "Lula",
+   "p": "PT",
+   "num": 13,
+   "v": 64256232,
+   "k": "--cb"
+  },
+  {
+   "n": "Flávio Bolsonaro",
+   "p": "PL",
+   "num": 22,
+   "v": 59826041,
+   "k": "--ca"
+  }
+ ],
+ "T2": {
+  "comp": 128236074
+ },
+ "Y22": {
+  "t1": {
+   "apto": 156454011,
+   "comp": 123682372,
+   "brancos": 1964779,
+   "nulos": 3487874,
+   "top": [
+    [
+     "Lula",
+     "PT",
+     57259504,
+     48.43
+    ],
+    [
+     "Jair Bolsonaro",
+     "PL",
+     51072345,
+     43.2
+    ]
+   ]
+  },
+  "t2": {
+   "apto": 156454011,
+   "comp": 124252796,
+   "brancos": 1769678,
+   "nulos": 3930765,
+   "top": [
+    [
+     "Lula",
+     "PT",
+     60345999,
+     50.9
+    ],
+    [
+     "Jair Bolsonaro",
+     "PL",
+     58206354,
+     49.1
+    ]
+   ]
+  }
+ },
+ "CAM26": {
+  "PL": 121,
+  "PT": 70,
+  "UNIÃO": 46,
+  "PSD": 43,
+  "PP": 41,
+  "REPUBLICANOS": 41,
+  "MDB": 36,
+  "PODE": 27,
+  "PSB": 15,
+  "PSOL": 14,
+  "PCDOB": 11,
+  "PSDB": 11,
+  "NOVO": 10,
+  "PV": 7,
+  "PDT": 6,
+  "AVANTE": 5,
+  "PRD": 5,
+  "SOLIDARIEDADE": 2,
+  "MISSÃO": 1,
+  "REDE": 1
+ },
+ "CAM22": {
+  "PL": 98,
+  "PT": 69,
+  "UNIÃO": 57,
+  "PP": 47,
+  "PSD": 42,
+  "MDB": 41,
+  "REPUBLICANOS": 40,
+  "PDT": 16,
+  "PSB": 15,
+  "PODE": 14,
+  "PSDB": 13,
+  "PSOL": 13,
+  "AVANTE": 7,
+  "PCDOB": 7,
+  "PV": 6,
+  "SOLIDARIEDADE": 4,
+  "NOVO": 3,
+  "REDE": 2
+ },
+ "SEN26": {
+  "PL": 19,
+  "MDB": 7,
+  "PT": 6,
+  "NOVO": 3,
+  "PP": 3,
+  "PSB": 3,
+  "UNIÃO": 3,
+  "PODE": 2,
+  "PSD": 2,
+  "PSDB": 2,
+  "REPUBLICANOS": 2,
+  "PDT": 1,
+  "REDE": 1
+ },
+ "REG": {
+  "N": "Norte",
+  "NE": "Nordeste",
+  "CO": "Centro-Oeste",
+  "SE": "Sudeste",
+  "S": "Sul"
+ },
+ "UFS": {
+  "AC": [
+   "Acre",
+   "N",
+   "f",
+   64.56,
+   "Mailza Assis",
+   "PP",
+   2,
+   [
+    [
+     "Mailza Assis",
+     "PP",
+     66.21
+    ],
+    [
+     "Alan Rick",
+     "REPUBLICANOS",
+     33.79
+    ]
+   ],
+   [
+    [
+     "Marcio Bittar",
+     "PL"
+    ],
+    [
+     "Mara Rocha",
+     "REPUBLICANOS"
+    ]
+   ]
+  ],
+  "AL": [
+   "Alagoas",
+   "NE",
+   "l",
+   54.73,
+   "JHC",
+   "PSDB",
+   1,
+   null,
+   [
+    [
+     "Arthur Lira",
+     "PP"
+    ],
+    [
+     "Marina JHC",
+     "PSDB"
+    ]
+   ]
+  ],
+  "AP": [
+   "Amapá",
+   "N",
+   "l",
+   45.71,
+   "Dr. Furlan",
+   "PSD",
+   1,
+   null,
+   [
+    [
+     "Rayssa Furlan",
+     "PODE"
+    ],
+    [
+     "Lucas Barreto",
+     "PSD"
+    ]
+   ]
+  ],
+  "AM": [
+   "Amazonas",
+   "N",
+   "l",
+   48.23,
+   "Omar Aziz",
+   "PSD",
+   2,
+   null,
+   [
+    [
+     "Eduardo Braga",
+     "MDB"
+    ],
+    [
+     "Plínio Valério",
+     "PSDB"
+    ]
+   ]
+  ],
+  "BA": [
+   "Bahia",
+   "NE",
+   "l",
+   66.17,
+   "Jerônimo Rodrigues",
+   "PT",
+   1,
+   null,
+   [
+    [
+     "Rui Costa",
+     "PT"
+    ],
+    [
+     "Jaques Wagner",
+     "PT"
+    ]
+   ]
+  ],
+  "CE": [
+   "Ceará",
+   "NE",
+   "l",
+   63.29,
+   "Elmano de Freitas",
+   "PT",
+   1,
+   null,
+   [
+    [
+     "Cid Gomes",
+     "PSB"
+    ],
+    [
+     "Luizianne",
+     "REDE"
+    ]
+   ]
+  ],
+  "DF": [
+   "Distrito Federal",
+   "CO",
+   "f",
+   51.31,
+   "Celina Leão",
+   "PP",
+   2,
+   [
+    [
+     "Celina Leão",
+     "PP",
+     57.18
+    ],
+    [
+     "Leandro Grass",
+     "PT",
+     42.82
+    ]
+   ],
+   [
+    [
+     "Michelle Bolsonaro",
+     "PL"
+    ],
+    [
+     "Bia Kicis",
+     "PL"
+    ]
+   ]
+  ],
+  "ES": [
+   "Espírito Santo",
+   "SE",
+   "f",
+   54.78,
+   "Lorenzo Pazolini",
+   "REPUBLICANOS",
+   2,
+   null,
+   [
+    [
+     "Renato Casagrande",
+     "PSB"
+    ],
+    [
+     "Evair de Melo",
+     "REPUBLICANOS"
+    ]
+   ]
+  ],
+  "GO": [
+   "Goiás",
+   "CO",
+   "f",
+   53.6,
+   "Daniel Vilela",
+   "MDB",
+   1,
+   null,
+   [
+    [
+     "Gustavo Gayer",
+     "PL"
+    ],
+    [
+     "Gracinha Caiado",
+     "UNIÃO"
+    ]
+   ]
+  ],
+  "MA": [
+   "Maranhão",
+   "NE",
+   "l",
+   63.99,
+   "Eduardo Braide",
+   "PSD",
+   1,
+   null,
+   [
+    [
+     "Fufuca",
+     "PP"
+    ],
+    [
+     "Lahesio Bonfim",
+     "NOVO"
+    ]
+   ]
+  ],
+  "MT": [
+   "Mato Grosso",
+   "CO",
+   "f",
+   65.15,
+   "Otaviano Pivetta",
+   "REPUBLICANOS",
+   1,
+   null,
+   [
+    [
+     "Mauro Mendes",
+     "UNIÃO"
+    ],
+    [
+     "Zé Medeiros",
+     "PL"
+    ]
+   ]
+  ],
+  "MS": [
+   "Mato Grosso do Sul",
+   "CO",
+   "f",
+   58.6,
+   "Eduardo Riedel",
+   "PP",
+   1,
+   null,
+   [
+    [
+     "Reinaldo Azambuja",
+     "PL"
+    ],
+    [
+     "Capitão Contar",
+     "PL"
+    ]
+   ]
+  ],
+  "MG": [
+   "Minas Gerais",
+   "SE",
+   "f",
+   48.24,
+   "Cleitinho Azevedo",
+   "REPUBLICANOS",
+   1,
+   [
+    [
+     "Cleitinho Azevedo",
+     "REPUBLICANOS",
+     55.4
+    ],
+    [
+     "Patrus Ananias",
+     "PT",
+     26.34
+    ]
+   ],
+   [
+    [
+     "Domingos Sávio",
+     "PL"
+    ],
+    [
+     "Marília Campos",
+     "PT"
+    ]
+   ]
+  ],
+  "PA": [
+   "Pará",
+   "N",
+   "l",
+   49.91,
+   "Dr. Daniel",
+   "PODE",
+   1,
+   null,
+   [
+    [
+     "Helder",
+     "MDB"
+    ],
+    [
+     "Chicão",
+     "UNIÃO"
+    ]
+   ]
+  ],
+  "PB": [
+   "Paraíba",
+   "NE",
+   "l",
+   61.31,
+   "Lucas Ribeiro",
+   "PP",
+   1,
+   null,
+   [
+    [
+     "João Azevêdo",
+     "PSB"
+    ],
+    [
+     "Veneziano",
+     "MDB"
+    ]
+   ]
+  ],
+  "PR": [
+   "Paraná",
+   "S",
+   "f",
+   59.91,
+   "Sergio Moro",
+   "PL",
+   1,
+   null,
+   [
+    [
+     "Filipe Barros",
+     "PL"
+    ],
+    [
+     "Deltan Dallagnol",
+     "NOVO"
+    ]
+   ]
+  ],
+  "PE": [
+   "Pernambuco",
+   "NE",
+   "l",
+   63.45,
+   "Raquel Lyra",
+   "PSD",
+   1,
+   null,
+   [
+    [
+     "Humberto Costa",
+     "PT"
+    ],
+    [
+     "Marília Arraes",
+     "PDT"
+    ]
+   ]
+  ],
+  "PI": [
+   "Piauí",
+   "NE",
+   "l",
+   70.99,
+   "Rafael Fonteles",
+   "PT",
+   1,
+   null,
+   [
+    [
+     "Marcelo Castro",
+     "MDB"
+    ],
+    [
+     "Júlio César O Julim do Lula",
+     "PSD"
+    ]
+   ]
+  ],
+  "RJ": [
+   "Rio de Janeiro",
+   "SE",
+   "f",
+   53.01,
+   "Douglas Ruas",
+   "PL",
+   1,
+   null,
+   [
+    [
+     "Carlos Portinho",
+     "PL"
+    ],
+    [
+     "Carlos Jordy",
+     "PL"
+    ]
+   ]
+  ],
+  "RN": [
+   "Rio Grande do Norte",
+   "NE",
+   "l",
+   59.75,
+   "Cadu de Lula",
+   "PT",
+   2,
+   [
+    [
+     "Cadu de Lula",
+     "PT",
+     50.77
+    ],
+    [
+     "Allyson Bezerra",
+     "UNIÃO",
+     49.23
+    ]
+   ],
+   [
+    [
+     "Styvenson Valentim",
+     "PODE"
+    ],
+    [
+     "Samanda de Lula",
+     "PT"
+    ]
+   ]
+  ],
+  "RS": [
+   "Rio Grande do Sul",
+   "S",
+   "f",
+   55.64,
+   "Zucco",
+   "PL",
+   1,
+   null,
+   [
+    [
+     "Sanderson",
+     "PL"
+    ],
+    [
+     "Marcel Van Hattem",
+     "NOVO"
+    ]
+   ]
+  ],
+  "RO": [
+   "Rondônia",
+   "N",
+   "f",
+   67.45,
+   "Marcos Rogério",
+   "PL",
+   1,
+   null,
+   [
+    [
+     "Dr. Fernando Máximo",
+     "PL"
+    ],
+    [
+     "Bruno Scheid",
+     "PL"
+    ]
+   ]
+  ],
+  "RR": [
+   "Roraima",
+   "N",
+   "f",
+   71.06,
+   "Arthur Henrique",
+   "PL",
+   1,
+   null,
+   [
+    [
+     "Nicoletti",
+     "PL"
+    ],
+    [
+     "Teresa Surita",
+     "MDB"
+    ]
+   ]
+  ],
+  "SC": [
+   "Santa Catarina",
+   "S",
+   "f",
+   66.65,
+   "Jorginho Mello",
+   "PL",
+   1,
+   null,
+   [
+    [
+     "Carol de Toni",
+     "PL"
+    ],
+    [
+     "Carlos Bolsonaro",
+     "PL"
+    ]
+   ]
+  ],
+  "SP": [
+   "São Paulo",
+   "SE",
+   "f",
+   51.93,
+   "Tarcísio",
+   "REPUBLICANOS",
+   1,
+   [
+    [
+     "Tarcísio",
+     "REPUBLICANOS",
+     62.65
+    ],
+    [
+     "Fernando Haddad",
+     "PT",
+     36.42
+    ]
+   ],
+   [
+    [
+     "Guilherme Derrite",
+     "PP"
+    ],
+    [
+     "André do Prado",
+     "PL"
+    ]
+   ]
+  ],
+  "SE": [
+   "Sergipe",
+   "NE",
+   "l",
+   62.75,
+   "Fábio",
+   "PSD",
+   1,
+   null,
+   [
+    [
+     "Rogério Carvalho",
+     "PT"
+    ],
+    [
+     "Delegado Alessandro",
+     "MDB"
+    ]
+   ]
+  ],
+  "TO": [
+   "Tocantins",
+   "N",
+   "f",
+   50.44,
+   "Vicentinho Júnior",
+   "PSDB",
+   2,
+   [
+    [
+     "Vicentinho Júnior",
+     "PSDB",
+     64.02
+    ]
+   ],
+   [
+    [
+     "Eduardo Gomes",
+     "PL"
+    ],
+    [
+     "Alexandre Guimarães",
+     "MDB"
+    ]
+   ]
+  ]
+ },
+ "SP": {
+  "eleit": 34081699,
+  "comp": 26394256,
+  "t1": {
+   "f": [
+    12922023,
+    51.93
+   ],
+   "l": [
+    9505413,
+    38.2
+   ],
+   "o": [
+    [
+     "Augusto Cury",
+     "AVANTE",
+     892368,
+     3.59
+    ],
+    [
+     "Renan Santos",
+     "MISSÃO",
+     804310,
+     3.23
+    ],
+    [
+     "Ronaldo Caiado",
+     "PSD",
+     579571,
+     2.33
+    ]
+   ]
+  },
+  "t2": {
+   "f": [
+    14139178,
+    53.85
+   ],
+   "l": [
+    12119274,
+    46.15
+   ]
+  },
+  "gov": [
+   [
+    "Tarcísio",
+    "REPUBLICANOS",
+    14491874,
+    62.65
+   ],
+   [
+    "Fernando Haddad",
+    "PT",
+    8423656,
+    36.42
+   ]
+  ],
+  "sen": [
+   [
+    "Guilherme Derrite",
+    "PP",
+    13273880,
+    30.59
+   ],
+   [
+    "André do Prado",
+    "PL",
+    12703089,
+    29.28
+   ],
+   [
+    "Simone Tebet",
+    "PSB",
+    8342968,
+    19.23
+   ],
+   [
+    "Marina Silva",
+    "REDE",
+    7862400,
+    18.12
+   ]
+  ]
+ },
+ "FOTOS": {
+  "Flávio Bolsonaro": "assets/img/candidatos/flavio-bolsonaro.webp",
+  "Lula": "assets/img/candidatos/lula.webp",
+  "Augusto Cury": "assets/img/candidatos/augusto-cury.webp",
+  "Renan Santos": "assets/img/candidatos/renan-santos.webp",
+  "Ronaldo Caiado": "assets/img/candidatos/ronaldo-caiado.webp",
+  "Romeu Zema": "assets/img/candidatos/romeu-zema.webp"
+ }
+}

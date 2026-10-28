@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Painel público e gratuito com os resultados oficiais das Eleições 2026 (TSE).">
+<title>Urna Aberta</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=JetBrains+Mono:wght@500;700&family=Public+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<header class="top">
+  <div class="bar">
+    <a class="brand" href="#visao-geral" aria-label="Urna Aberta, início"><i aria-hidden="true"><b></b><b></b><b></b><b></b><b></b><b></b></i>Urna Aberta <small>2026</small></a>
+    <nav class="tabs" aria-label="Seções do painel" id="tabs">
+      <a href="#visao-geral">Visão geral</a>
+      <a href="#presidente">Presidente</a>
+      <a href="#estados">Estados</a>
+      <a href="#partidos">Partidos</a>
+      <a href="#comparar">Comparar</a>
+      <a href="#tendencias">Tendências</a>
+      <a href="#importar">Dados do TSE</a>
+      <a href="#fontes">Fontes</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap" id="conteudo">
+
+<section class="view" id="v-visao-geral" aria-labelledby="t-vg">
+  <div class="hero">
+    <span class="kicker">Eleições Gerais · 4 e 25 de outubro de 2026</span>
+    <h1 id="t-vg">Os resultados, na sua mão e sem cadastro.</h1>
+    <p class="lead">Painel público com os números oficiais divulgados pelo TSE. Explore por cargo, estado e partido, compare candidatos e veja como cada dado foi obtido. Nenhuma interpretação política é feita aqui.</p>
+  </div>
+  <div class="grid">
+    <article class="card"><h3>Presidente <small>2º turno</small></h3><div id="vg-p2"></div><p class="note" id="vg-p2n"></p></article>
+    <article class="card"><h3>Presidente <small>1º turno</small></h3><div id="vg-p1"></div></article>
+  </div>
+  <div class="grid">
+    <article class="card"><h3>Quem foi votar <small>2º turno</small></h3><div id="vg-part"></div></article>
+    <article class="card"><h3>Câmara dos Deputados <small>513 cadeiras</small></h3><div id="vg-cam"></div></article>
+  </div>
+</section>
+
+<section class="view" id="v-presidente" aria-labelledby="t-pr" hidden>
+  <div class="hero"><span class="kicker">Cargo · Presidente da República</span><h2 id="t-pr">Votação nacional</h2></div>
+  <div class="ctl"><div class="seg" role="group" aria-label="Turno"><button data-t="1" aria-pressed="true">1º turno</button><button data-t="2" aria-pressed="false">2º turno</button></div></div>
+  <div class="grid"><article class="card"><h3>Votos por candidato</h3><div id="pr-bars"></div></article><article class="card"><h3>Proporção dos votos válidos</h3><div id="pr-donut"></div></article></div>
+  <div class="tw"><table id="pr-table"></table></div>
+  <article class="card" id="pr-mov"></article>
+  <p class="note" id="pr-note"></p>
+</section>
+
+<section class="view" id="v-estados" aria-labelledby="t-es" hidden>
+  <div class="hero"><span class="kicker">Estados e Distrito Federal</span><h2 id="t-es">Quem liderou em cada estado</h2>
+  <p class="lead">Cada quadrado é uma unidade da federação, em posição aproximada. A cor indica quem teve mais votos válidos para presidente no 1º turno; o tom mais forte indica mais de 60%. Selecione um estado para ver governo e Senado.</p></div>
+  <div class="ctl"><span class="kicker" style="align-self:center">Região</span><div id="es-reg" style="display:flex;gap:6px;flex-wrap:wrap"></div></div>
+  <div class="mapwrap">
+    <div class="card"><div id="es-map"></div><div class="legend" id="es-leg"></div></div>
+    <div class="card" id="es-det" aria-live="polite"></div>
+  </div>
+  <div class="ctl"><label>Ordenar a tabela por<select id="es-sort"><option value="nome">Nome do estado</option><option value="pct">Maior percentual do líder</option><option value="reg">Região</option></select></label></div>
+  <div class="tw"><table id="es-table"></table></div>
+</section>
+
+<section class="view" id="v-partidos" aria-labelledby="t-pa" hidden>
+  <div class="hero"><span class="kicker">Partidos</span><h2 id="t-pa">Cadeiras e governos por partido</h2></div>
+  <div class="ctl">
+    <div class="seg" role="group" aria-label="Cargo" id="pa-cargo"><button data-c="cam" aria-pressed="true">Câmara</button><button data-c="sen" aria-pressed="false">Senado</button><button data-c="gov" aria-pressed="false">Governos</button></div>
+    <label>Destacar partido<select id="pa-sel"></select></label>
+  </div>
+  <div class="grid">
+    <article class="card"><h3 id="pa-h"></h3><div id="pa-bars"></div></article>
+    <article class="card"><h3>Proporção</h3><div id="pa-donut"></div><p class="note" id="pa-note"></p></article>
+  </div>
+</section>
+
+<section class="view" id="v-comparar" aria-labelledby="t-co" hidden>
+  <div class="hero"><span class="kicker">Comparar</span><h2 id="t-co">Lado a lado</h2></div>
+  <div class="ctl"><div class="seg" role="group" aria-label="O que comparar" id="co-mode"><button data-m="cand" aria-pressed="true">Candidatos a presidente</button><button data-m="uf" aria-pressed="false">Estados</button></div></div>
+  <div class="ctl" id="co-ctl"></div>
+  <div id="co-out" aria-live="polite" style="display:flex;flex-direction:column;gap:16px"></div>
+</section>
+
+<section class="view" id="v-tendencias" aria-labelledby="t-te" hidden>
+  <div class="hero"><span class="kicker">Tendências</span><h2 id="t-te">2022 e 2026 em perspectiva</h2>
+  <p class="lead">Números oficiais das duas últimas eleições presidenciais. Os candidatos mudaram; use como referência, não como série contínua.</p></div>
+  <article class="card"><h3>Votos válidos nas quatro votações <small>% por candidato</small></h3><div id="te-line"></div><p class="note">O eixo vertical começa em 40% para destacar as diferenças. O adversário de Lula foi Jair Bolsonaro em 2022 e Flávio Bolsonaro em 2026. No 1º turno de 2026, o gráfico mostra os dois finalistas, não o resultado de todos os candidatos.</p></article>
+  <article class="card"><h3>Comparecimento e abstenção <small>combinado</small></h3><div id="te-combo"></div><p class="note">Barras: quantos eleitores votaram, em milhões. Linha: percentual do eleitorado apto que não compareceu.</p></article>
+  <article class="card"><h3>Câmara dos Deputados <small>variação de cadeiras 2022 → 2026</small></h3><div id="te-cam"></div>
+  <p class="note">Fusões e incorporações partidárias entre as duas eleições (por exemplo, PSC no Podemos e PTB e Patriota no PRD) afetam a comparação direta de algumas siglas. Partidos presentes só em um dos anos ficaram de fora.</p></article>
+</section>
+
+<section class="view" id="v-importar" aria-labelledby="t-im" hidden>
+  <div class="hero"><span class="kicker">Municípios, zonas e candidatos</span><h2 id="t-im">Explore os arquivos do TSE</h2>
+  <p class="lead">Os dados por município e zona têm milhões de linhas. Baixe o arquivo oficial no Portal de Dados Abertos e abra aqui: ele é lido no seu aparelho e não é enviado a lugar nenhum.</p></div>
+  <article class="card">
+    <ol class="src" style="gap:6px">
+      <li>Acesse <a href="https://dadosabertos.tse.jus.br" target="_blank" rel="noopener">dadosabertos.tse.jus.br</a> e procure o conjunto de Resultados 2026.</li>
+      <li>Baixe o arquivo <span class="mono">votacao_candidato_munzona</span> do seu estado e descompacte o .csv.</li>
+      <li>Selecione o .csv abaixo. Arquivos por estado são mais leves que o nacional, que pode travar aparelhos simples.</li>
+    </ol>
+    <div class="ctl">
+      <label>Arquivo .csv<input type="file" id="im-file" accept=".csv,.txt,text/csv"></label>
+      <label>Codificação<select id="im-enc"><option value="windows-1252">Latin-1 (padrão do TSE)</option><option value="utf-8">UTF-8</option></select></label>
+    </div>
+    <progress id="im-prog" max="100" value="0" hidden></progress>
+    <div id="im-msg" class="msg" hidden></div>
+  </article>
+  <div id="im-out" hidden style="display:none;flex-direction:column;gap:16px">
+    <div class="ctl" id="im-filters"></div>
+    <article class="card"><h3 id="im-h"></h3><div id="im-bars"></div><p class="note">Percentuais sobre os votos nominais do filtro atual. Votos em branco, nulos e de legenda ficam fora deste cálculo.</p></article>
+  </div>
+</section>
+
+<section class="view" id="v-fontes" aria-labelledby="t-fo" hidden>
+  <div class="hero"><span class="kicker">Transparência</span><h2 id="t-fo">De onde vêm os números</h2>
+  <p class="lead">Conferência feita em 27 de outubro de 2026. Todo número do painel foi lido em páginas oficiais do TSE ou em apurações publicadas com base nos dados do TSE. Nada foi estimado, exceto onde marcado como calculado.</p></div>
+  <article class="card"><h3>Fontes consultadas</h3>
+    <ol class="src">
+      <li><a href="https://www.tse.jus.br/comunicacao/noticias/2026/Outubro/flavio-bolsonaro-e-lula-vao-disputar-o-2o-turno-para-a-presidencia-da-republica" target="_blank" rel="noopener">TSE: resultado do 1º turno para presidente</a>. Totais de votos válidos, brancos e nulos da apuração com 99,99% das urnas.</li>
+      <li><a href="https://www.tse.jus.br/comunicacao/noticias/2026/Outubro/presidente-do-tse-anuncia-reeleicao-de-lula-e-faz-balanco-do-2o-turno-das-eleicoes-2026" target="_blank" rel="noopener">TSE: balanço do 2º turno</a>. Votos e percentuais dos dois candidatos, comparecimento e abstenção.</li>
+      <li><a href="https://www.cartacapital.com.br/politica/tse-encerra-apuracao-do-1o-turno/" target="_blank" rel="noopener">CartaCapital: apuração final do 1º turno</a>. Votos dos 12 candidatos, eleitorado apto e comparecimento.</li>
+      <li><a href="https://www.otempo.com.br/eleicoes/2026/analises/mapa-dos-votos" target="_blank" rel="noopener">O Tempo: mapa dos votos</a>, com base no TSE. Líderes por estado, governadores, Senado, Câmara e resultados de 2022.</li>
+      <li><a href="https://www.otempo.com.br/eleicoes/2026/analises/mapa-dos-votos/sp" target="_blank" rel="noopener">O Tempo: São Paulo</a>, com base no TSE. Votos do estado nos dois turnos, governador e Senado.</li>
+      <li><a href="https://www.mixvale.com.br/2026/10/26/segundo-turno-das-eleicoes-de-2026-define-governadores-em-cinco-estados-e-no-distrito-federal/" target="_blank" rel="noopener">Mix Vale</a> e <a href="https://www.opovo.com.br/noticias/politica/eleicoes/2026/10/25/resultados-da-eleicao-2026-governadores-eleitos-no-2-turno.html" target="_blank" rel="noopener">O Povo</a>: percentuais dos governadores no 2º turno e primeiros resultados estaduais citados.</li>
+      <li><a href="https://resultados.tse.jus.br" target="_blank" rel="noopener">Portal Resultados do TSE</a> e <a href="https://dadosabertos.tse.jus.br" target="_blank" rel="noopener">Dados Abertos do TSE</a>: fonte primária para conferir qualquer número e para os arquivos por município, zona e seção.</li>
+    </ol>
+  </article>
+  <article class="card"><h3>Diferenças entre fontes</h3>
+    <ul style="margin:0;padding-left:1.1rem;display:flex;flex-direction:column;gap:8px">
+      <li>Nos votos do 1º turno, o painel usa a apuração final com 100% das seções (Flávio Bolsonaro 56.104.503; Lula 53.879.538). A primeira divulgação do TSE, com 99,99%, trazia 56.104.268 e 53.876.617. Os percentuais não mudam.</li>
+      <li>A soma dos votos dos 12 candidatos (119.300.788) coincide com o total de votos válidos informado pelo TSE.</li>
+      <li>A abstenção do 1º turno (33.469.667) foi calculada como eleitorado apto menos comparecimento. Uma das fontes cita 33.469.244; o percentual de 21,08% é o mesmo.</li>
+      <li>Brancos e nulos do 2º turno foram calculados: comparecimento menos votos válidos dos dois candidatos.</li>
+      <li>No Rio de Janeiro, veículos noticiaram uma recontagem após a apuração inicial. O painel exibe o governador listado na apuração mais recente e não traz percentual para esse estado.</li>
+    </ul>
+  </article>
+  <article class="card"><h3>O que este painel ainda não tem</h3>
+    <p>Resultados por município e zona, e o 2º turno por estado (exceto São Paulo), não estão embutidos porque não foram obtidos em fonte oficial legível. Use a aba Dados do TSE para explorar esses recortes direto dos arquivos oficiais.</p>
+    <p class="note">As cores seguem a bandeira do Brasil e uma paleta neutra; não representam partidos. A ordem das listas segue sempre o número de votos.</p>
+  </article>
+</section>
+
+<footer>
+  <span>Urna Aberta é um painel independente, gratuito e sem login. Não é um serviço do TSE.</span>
+  <span>Para conferir qualquer número, consulte o Portal Resultados do TSE.</span>
+</footer>
+</main>
+
+<script src="assets/js/dados.js"></script>
+<script src="assets/js/utils.js"></script>
+<script src="assets/js/graficos.js"></script>
+<script src="assets/js/leitor-csv.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

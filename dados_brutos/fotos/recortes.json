@@ -1,0 +1,11 @@
+{
+ "_sobre": "Recorte quadrado de cada foto original: centro (cx, cy) e lado, em fração da LARGURA da imagem.",
+ "fotos": [
+  {"nome": "Flávio Bolsonaro", "arquivo": "flavio-bolsonaro.jpg", "cx": 0.464, "cy": 0.3135, "lado": 0.56},
+  {"nome": "Lula", "arquivo": "lula.jpg", "cx": 0.488, "cy": 0.4427, "lado": 0.54},
+  {"nome": "Augusto Cury", "arquivo": "augusto-cury.webp", "cx": 0.497, "cy": 0.2079, "lado": 0.42},
+  {"nome": "Renan Santos", "arquivo": "renan-santos.jpg", "cx": 0.51, "cy": 0.33, "lado": 0.56},
+  {"nome": "Ronaldo Caiado", "arquivo": "ronaldo-caiado.jpg", "cx": 0.50, "cy": 0.4667, "lado": 0.75},
+  {"nome": "Romeu Zema", "arquivo": "romeu-zema.jpg", "cx": 0.517, "cy": 0.4667, "lado": 0.75}
+ ]
+}
